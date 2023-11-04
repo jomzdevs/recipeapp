@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "418685471722",
+    "project_id": "fir-auth-39413",
+    "storage_bucket": "fir-auth-39413.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418685471722:android:da794fc616b43ab2ec0093",
+        "android_client_info": {
+          "package_name": "com.example.recipeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb1J2m0sM4ZfhftfYuby4zwmYhp3mpeAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
