@@ -5,7 +5,6 @@ import 'package:recipeapp/constants.dart';
 import 'package:recipeapp/data.dart';
 import 'package:recipeapp/detail.dart';
 import 'package:recipeapp/shared.dart';
-import 'package:recipeapp/sign_in/signin_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
