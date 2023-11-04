@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:recipeapp/auth/auth.dart';
 import 'package:recipeapp/constants.dart';
 import 'package:recipeapp/data.dart';
 import 'package:recipeapp/detail.dart';
@@ -19,8 +20,6 @@ class _MainPageState extends State<MainPage> {
 //signout function
   signOut() async {
     await auth.signOut();
-    Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => SignInPage()));
   }
 
   @override
@@ -45,7 +44,9 @@ class _MainPageState extends State<MainPage> {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Auth().signOut();
+        },
         backgroundColor: Colors.green,
         child: const Icon(Icons.logout_rounded),
       ),
