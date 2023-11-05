@@ -4,6 +4,7 @@ import 'package:recipeapp/auth/auth.dart';
 import 'package:recipeapp/constants.dart';
 import 'package:recipeapp/data.dart';
 import 'package:recipeapp/detail.dart';
+import 'package:recipeapp/profile/profile.dart';
 import 'package:recipeapp/shared.dart';
 
 class MainPage extends StatefulWidget {
@@ -32,14 +33,28 @@ class _MainPageState extends State<MainPage> {
           Icons.sort,
           color: Colors.black,
         ),
-        actions: const [
-          Padding(
+        actions: [
+          const Padding(
             padding: EdgeInsets.only(right: 16),
             child: Icon(
               Icons.search,
               color: Colors.black,
             ),
           ),
+          Padding(
+              padding: const EdgeInsets.only(right: 10),
+              child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()));
+                },
+                icon: const Icon(
+                  Icons.person,
+                  color: Colors.black,
+                ),
+              )),
         ],
       ),
       floatingActionButton: FloatingActionButton(
