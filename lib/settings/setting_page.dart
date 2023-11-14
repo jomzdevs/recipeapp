@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:recipeapp/auth/auth.dart';
 import 'package:recipeapp/profile/profile.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:recipeapp/settings/edit_screen.dart';
@@ -14,6 +16,12 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   bool isDarkMode = false;
+
+  final FirebaseAuth auth = FirebaseAuth.instance;
+//signout function
+  signOut() async {
+    await auth.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -141,6 +149,13 @@ class _SettingsPageState extends State<SettingsPage> {
             ],
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Auth().signOut();
+        },
+        backgroundColor: Colors.red,
+        child: const Icon(Icons.logout_rounded),
       ),
     );
   }

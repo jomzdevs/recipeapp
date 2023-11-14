@@ -1,6 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:recipeapp/auth/auth.dart';
 import 'package:recipeapp/constants.dart';
 import 'package:recipeapp/data.dart';
 import 'package:recipeapp/detail.dart';
@@ -16,11 +14,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   List<bool> optionSelected = [true, false, false];
-  final FirebaseAuth auth = FirebaseAuth.instance;
-//signout function
-  signOut() async {
-    await auth.signOut();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,13 +49,6 @@ class _MainPageState extends State<MainPage> {
                 ),
               )),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Auth().signOut();
-        },
-        backgroundColor: Colors.green,
-        child: const Icon(Icons.logout_rounded),
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
