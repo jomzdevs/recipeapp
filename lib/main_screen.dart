@@ -60,7 +60,7 @@ class _MainPageState extends State<MainPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  buildTextTitleVariation1('Filipino Cuisinero'),
+                  buildTextTitleVariation1('Pinoy Cuisinero'),
                   buildTextSubTitleVariation1(
                       'Reciping Pinoy para sa Pilipino'),
                   const SizedBox(
@@ -222,9 +222,6 @@ class _MainPageState extends State<MainPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 buildCalories("${recipe.calories} Kcal"),
-                const Icon(
-                  Icons.favorite_border,
-                )
               ],
             ),
           ],
@@ -276,9 +273,6 @@ class _MainPageState extends State<MainPage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       buildCalories("${recipe.calories} Kcal"),
-                      const Icon(
-                        Icons.favorite_border,
-                      )
                     ],
                   ),
                 ],

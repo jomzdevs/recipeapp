@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:recipeapp/about/about_page.dart';
 import 'package:recipeapp/auth/auth.dart';
 import 'package:recipeapp/profile/profile.dart';
 import 'package:ionicons/ionicons.dart';
@@ -109,23 +110,6 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
               ),
               const SizedBox(height: 20),
-              SettingItem(
-                title: "Language",
-                icon: Ionicons.earth,
-                bgColor: Colors.orange.shade100,
-                iconColor: Colors.orange,
-                value: "English",
-                onTap: () {},
-              ),
-              const SizedBox(height: 20),
-              SettingItem(
-                title: "Notifications",
-                icon: Ionicons.notifications,
-                bgColor: Colors.blue.shade100,
-                iconColor: Colors.blue,
-                onTap: () {},
-              ),
-              const SizedBox(height: 20),
               SettingSwitch(
                 title: "Dark Mode",
                 icon: Ionicons.earth,
@@ -140,11 +124,16 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               const SizedBox(height: 20),
               SettingItem(
-                title: "Help",
+                title: "About",
                 icon: Ionicons.nuclear,
                 bgColor: Colors.red.shade100,
                 iconColor: Colors.red,
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AboutPage()));
+                },
               ),
             ],
           ),
