@@ -33,10 +33,10 @@ class _EditAccountScreenState extends State<EditAccountScreen> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15),
                 ),
-                fixedSize: Size(60, 50),
+                fixedSize: const Size(60, 50),
                 elevation: 3,
               ),
-              icon: Icon(Ionicons.checkmark, color: Colors.white),
+              icon: const Icon(Ionicons.checkmark, color: Colors.white),
             ),
           ),
         ],

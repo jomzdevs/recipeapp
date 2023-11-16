@@ -33,7 +33,7 @@ class _SettingsPageState extends State<SettingsPage> {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ProfilePage()));
           },
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
         ),
         leadingWidth: 100,
       ),
@@ -95,7 +95,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           ),
                         );
                       },
-                      icon: Icon(Ionicons.chevron_back_outline),
+                      icon: const Icon(Ionicons.chevron_back_outline),
                     )
                   ],
                 ),

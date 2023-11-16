@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 //import 'package:recipeapp/profile/profile.dart';
 //import 'package:recipeapp/sign_in/homepage.dart';
-//import 'package:recipeapp/widgets/widget_tree.dart';
+import 'package:recipeapp/widgets/widget_tree.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:recipeapp/main_screen.dart';
+//import 'package:recipeapp/main_screen.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.montserratTextTheme(),
       ),
       debugShowCheckedModeBanner: false,
-      home: const MainPage(),
+      home: const WidgetTree(),
     );
   }
 }
