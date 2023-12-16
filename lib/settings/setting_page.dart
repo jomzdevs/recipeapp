@@ -20,8 +20,8 @@ class _SettingsPageState extends State<SettingsPage> {
 
   final FirebaseAuth auth = FirebaseAuth.instance;
 //signout function
-  signOut() async {
-    await auth.signOut();
+  Future<void> signOut() async {
+    await Auth().signOut();
   }
 
   @override
@@ -125,7 +125,7 @@ class _SettingsPageState extends State<SettingsPage> {
               const SizedBox(height: 20),
               SettingItem(
                 title: "About",
-                icon: Ionicons.nuclear,
+                icon: Ionicons.globe,
                 bgColor: Colors.red.shade100,
                 iconColor: Colors.red,
                 onTap: () {

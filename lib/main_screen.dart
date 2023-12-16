@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:recipeapp/add_recipe/add_recipe.dart';
 import 'package:recipeapp/constants.dart';
 import 'package:recipeapp/data.dart';
 import 'package:recipeapp/detail.dart';
-import 'package:recipeapp/profile/profile.dart';
+//import 'package:recipeapp/profile/profile.dart';
 import 'package:recipeapp/shared.dart';
 
 class MainPage extends StatefulWidget {
@@ -23,13 +24,9 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const Icon(
-          Icons.sort,
-          color: Colors.black,
-        ),
         actions: [
           const Padding(
-            padding: EdgeInsets.only(right: 16),
+            padding: EdgeInsets.only(),
             child: Icon(
               Icons.search,
               color: Colors.black,
@@ -42,10 +39,10 @@ class _MainPageState extends State<MainPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const ProfilePage()));
+                          builder: (context) => const AddRecipe()));
                 },
                 icon: const Icon(
-                  Icons.person,
+                  Icons.add,
                   color: Colors.black,
                 ),
               )),
